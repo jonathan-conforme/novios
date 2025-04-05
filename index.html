@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¿Quieres ser mi novia?</title>
+  <style>
+    body {
+        margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+    .contenedor {
+      max-width: 700px;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+      color: #ff4d88;
+      margin-bottom: 50px;
+    }
+
+    .botones {
+      margin-top: 50px;
+    
+      justify-content:center;
+      align-items: center;
+      
+      padding: 0 50px;
+      
+    }
+
+    button {
+        font-size: 1.5rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .si {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .no {
+      background-color: #f44336;
+      color: white;
+      position: absolute;
+    }
+
+    #mensaje {
+      display: none;
+      font-size: 2rem;
+      color: #ff3399;
+      margin-top: 40px;
+      animation: aparecer 1s ease forwards;
+    }
+
+    .emojis {
+      margin-top: 20px;
+      font-size: 2.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .emoji {
+      animation: flotar 2s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+
+  </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>¿Quieres ser mi novia 😱😍💘?</h1>
+    
+        <div class="botones" id="botones">
+          <button class="si" onclick="aceptar()">Sí 💖</button>
+          <button class="no" id="noBtn" onclick="moverNo(this)">No 😅</button>
+        </div>
+    
+        <div id="mensaje">
+          ¡Felicidades! Ya somos novios 💕🥳
+          <div class="emojis">
+            <div class="emoji">🎉</div>
+            <div class="emoji">💃</div>
+            <div class="emoji">🎊</div>
+            <div class="emoji">🥂</div>
+            <div class="emoji">🕺</div>
+          </div>
+        </div>
+      </div>
+    
+      <script>
+        function aceptar() {
+          document.getElementById("botones").style.display = "none";
+          document.getElementById("mensaje").style.display = "block";
+        }
+    
+        function moverNo(btn) {
+          const maxX = window.innerWidth - btn.offsetWidth;
+          const maxY = window.innerHeight - btn.offsetHeight;
+          const randomX = Math.floor(Math.random() * maxX);
+          const randomY = Math.floor(Math.random() * maxY);
+          btn.style.position = "absolute";
+          btn.style.left = randomX + "px";
+          btn.style.top = randomY + "px";
+        }
+      </script>
+</body>
+</html>
