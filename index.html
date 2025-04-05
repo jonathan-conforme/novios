@@ -13,7 +13,7 @@
 </head>
 <body class="bg-light">
   <div class="contenedor d-flex flex-column justify-content-center align-items-center min-vh-100">
-    <h1 class="text-center text-primary  display-4">¿Quieres ser mi novia? 😍💘</h1>
+    <h1 class=" titulo text-center text-primary  display-4">¿Quieres ser mi novia? 😍💘</h1>
     
     <div class="botones text-center" id="botones">
       <button class="btn btn-success  btn-lg" onclick="aceptar()">Sí 💖</button>
@@ -47,6 +47,7 @@
     function aceptar() {
       // Ocultar los botones y mostrar el mensaje
       document.getElementById("botones").style.display = "none";
+      document.getElementById("titulo").style.display = "none";
       document.querySelector("img").style.display = "none";
       document.getElementById("mensaje").style.display = "block";
 
