@@ -9,11 +9,15 @@ body {
   height: 100vh;
   overflow: hidden;
   text-align: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .contenedor {
   max-width: 700px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 80px;
   text-align: center;
 }
 
