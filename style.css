@@ -76,6 +76,8 @@ button:hover {
 
 .emoji {
   animation: flotar 2s ease-in-out infinite;
+  font-size: clamp(2rem, 10vw, 4rem);
+      margin: 0.5rem;
 }
 
 @keyframes flotar {
