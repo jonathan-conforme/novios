@@ -13,7 +13,6 @@
 </head>
 <body class="bg-light">
   <div class="contenedor d-flex flex-column justify-content-center align-items-center min-vh-100">
-    <div style="height:1px;">
     <h1 class="text-center text-primary  display-4">¿Quieres ser mi novia? 😍💘</h1>
     
     <div class="botones text-center" id="botones">
@@ -32,7 +31,6 @@
       </div>
     </div>
   </div>
-</div>
 
   <!-- Incluir jQuery y Bootstrap JS desde CDN -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -54,25 +52,6 @@
       btn.style.left = randomX + "px";
       btn.style.top = randomY + "px";
     }
-  </script>
-  <!-- justo antes de cerrar </body> -->
-<script src="https://unpkg.com/pulltorefreshjs@0.1.16/dist/index.umd.js"></script>
-<script>
-  PullToRefresh.init({
-    mainElement: 'body',
-    onRefresh() { window.location.reload(); }
-  });
-</script>
-  <script>
-    // Cambiar el color de fondo al hacer clic en el botón "Sí"
-    document.querySelector('.btn-success').addEventListener('click', function() {
-      document.body.style.backgroundColor = '#ffeb3b'; // Cambia a un color amarillo claro
-    });
-
-    // Cambiar el color de fondo al hacer clic en el botón "No"
-    document.querySelector('.btn-danger').addEventListener('click', function() {
-      document.body.style.backgroundColor = '#f44336'; // Cambia a un color rojo claro
-    });
   </script>
 </body>
 </html>

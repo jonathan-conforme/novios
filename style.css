@@ -16,7 +16,7 @@ body {
 .contenedor {
   max-width: 700px;
   width: 100%;
-  padding-bottom: 80px;
+  padding: 20px 20px 80px;
   text-align: center;
 }
 
