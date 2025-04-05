@@ -45,12 +45,13 @@
   
   <script>
     function aceptar() {
-      // Ocultar los botones y mostrar el mensaje
-      document.getElementById("botones").style.display = "none";
-      document.querySelector("img").style.display = "none";
-      document.getElementById("mensaje").style.display = "block";
+    // Ocultar el título, los botones, y la imagen original, mostrar el mensaje
+    document.querySelector(".titulo").style.display = "none";  // Ocultar el título
+    document.getElementById("botones").style.display = "none";  // Ocultar los botones
+    document.querySelector("img").style.display = "none";  // Ocultar la imagen original
+    document.getElementById("mensaje").style.display = "block";  // Mostrar el mensaje
+}
 
-    }
 
     function moverNo(btn) {
       const maxX = window.innerWidth - btn.offsetWidth;
