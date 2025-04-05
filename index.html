@@ -24,7 +24,10 @@
     </div>
 
     <div id="mensaje" class="mt-5 text-center" style="display:none;">
-      <p class="text-success fs-4">¡Felicidades! Ya somos novios 💕🥳</p>
+      <p class="text-success fs-4">¡Sabía que dirias que sí! Ya somos novios 💕🥳</p>
+      <div>
+        <img src="img/novios.jpg" alt="" class="img-fluid">
+      </div>
       <div class="d-flex justify-content-center flex-wrap">
         <div class="emoji">🎉</div>
         <div class="emoji">💃</div>
@@ -43,7 +46,9 @@
     function aceptar() {
       // Ocultar los botones y mostrar el mensaje
       document.getElementById("botones").style.display = "none";
+      document.querySelector("img").style.display = "none";
       document.getElementById("mensaje").style.display = "block";
+
     }
 
     function moverNo(btn) {
